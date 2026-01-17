@@ -15,4 +15,17 @@ class DummyController extends AbstractController
             'name' => 'DummyController',
         ]);
     }
+
+
+
+    #[Route('/home', name: 'app_home')]
+    public function home(): Response
+    {
+        $text = "Hello  this is home !";
+        $tabYear = [2020,2021,2022];
+        return $this->render('home/index.html.twig', [
+            "text" => $text,
+            "years" => $tabYear
+        ]);
+    }
 }

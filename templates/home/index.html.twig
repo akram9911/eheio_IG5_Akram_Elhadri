@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %} {{ parent()}} - Hello DummyController!{% endblock %}
+{% block title %} {{ parent() }} -Hello home!{% endblock %}
 
 {% block body %}
 <style>
@@ -8,15 +8,15 @@
     .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
 </style>
 
-{{ include('partials/_navbar.html.twig') }}
+{{include('partials/_navbar.html.twig')}}
 
 <div class="example-wrapper">
-    <h1>Hello {{ name }}! ✅</h1>
+    <h1> {{ text }}</h1>
 
-    This friendly message is coming from:
     <ul>
-        <li>Your controller at <code>C:/Users/LENOVO/Downloads/eheio_ig5_2K26-master/src/Controller/HomeController.php</code></li>
-        <li>Your template at <code>C:/Users/LENOVO/Downloads/eheio_ig5_2K26-master/templates/home/index.html.twig</code></li>
+        {% for year in years %}
+            <li> {{ year }} </li>
+        {% endfor %}
     </ul>
 </div>
 {% endblock %}
