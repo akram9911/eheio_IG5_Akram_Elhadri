@@ -42,3 +42,6 @@ webpack-dev:
 
 webpack-server:
 	$(EXEC_SERVER) npm run watch
+
+
+docker exec -it eheio_ig5_2K26-master-php-1 bash
